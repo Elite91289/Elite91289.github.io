@@ -1,0 +1,49 @@
+<html manifest="offlineCache.manifest">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<style>
+
+		.titlehead {
+		  border-radius: 5px;
+		  color: Black;
+		  padding: .5em;
+		  text-decoration: none;
+		  text-align: center;
+		  margin-top: -10px;
+		  margin-bottom: -10px;
+		  font-family: system-ui;
+		}
+
+	</style>
+	<head>
+		<title>PS4 Jailbreak 9.00</title>
+		<script>
+			function loadcomplete() {
+				document.getElementById("progress").innerHTML=sessionStorage.Queue+" Loaded Successfully !!";
+				sessionStorage.Queue="";
+			}
+		</script>
+		<script src="int64.js"></script>
+		<script src="rop.js"></script>
+		<script src="kexploit.js"></script>
+		<script src="webkit.js"></script>
+		<script src="payloads.js"></script>
+	</head>
+	<body>
+		<script>
+			window.onload = function(e){if(sessionStorage.Queue==null){sessionStorage.Queue="";}else if(sessionStorage.Queue!=""){executependingqueue(sessionStorage.Queue);}};
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!"};
+			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML="Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed"};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
+		</script>
+		<h1 id="progress" class="titlehead">PS4 Jailbreak 9.00</h1><br>
+		<input type="hidden" id="psip" value="localhost"/>
+		<div>
+			<table align="center" style="width:600px;margin-top:30px;">
+			<tr>
+			<td align="center" id="exploit" colspan="2">
+			<a href="#" class="button" onclick="goldhen(); return false" style="width:43%">Exploit + GoldHEN V2b</a>
+			</td>
+			</tr>
+			</table></div>
+	</body>
+</html>
